@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import PageTitle from "../page_title/PageTitle.jsx";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PageTitle from '../page_title/PageTitle.jsx';
 
-import "./Personnel.css";
+import './Personnel.css';
 
 const Blue_Box_Personnel = (props) => {
   return <div className="box-personnel">{props.title}</div>;

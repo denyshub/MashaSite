@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Sidebar.css'; // Для стилів сайдбара
 import { Link } from 'react-router-dom';
 
@@ -30,86 +30,100 @@ const Sidebar_Link = ({ icon, text, to, isActive, onClick }) => {
 const Sidebar = () => {
   const [activeLink, setActiveLink] = useState('/'); // Задаємо активний пункт
 
+  // Завантажуємо активне посилання з localStorage при монтуванні компонента
+  useEffect(() => {
+    const savedLink = localStorage.getItem('activeLink');
+    if (savedLink) {
+      setActiveLink(savedLink);
+    }
+  }, []);
+
+  // Функція для оновлення активного посилання
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+    localStorage.setItem('activeLink', link); // Зберігаємо активне посилання в localStorage
+  };
+
   return (
     <div className="sidebar">
       <h2>Система управління</h2>
       <ul>
-        <Sidebar_Link 
-          icon={MainMenu} 
-          text='Головне меню' 
-          to="/" 
-          isActive={activeLink === '/'} 
-          onClick={() => setActiveLink('/')}
+        <Sidebar_Link
+          icon={MainMenu}
+          text="Головне меню"
+          to="/"
+          isActive={activeLink === '/'}
+          onClick={() => handleLinkClick('/')}
         />
-        <Sidebar_Link 
-          icon={OsobSclad} 
-          text='Особовий склад' 
-          to="/personnel" 
-          isActive={activeLink === '/personnel'} 
-          onClick={() => setActiveLink('/personnel')}
+        <Sidebar_Link
+          icon={OsobSclad}
+          text="Особовий склад"
+          to="/personnel"
+          isActive={activeLink === '/personnel'}
+          onClick={() => handleLinkClick('/personnel')}
         />
-        <Sidebar_Link 
-          icon={Truck} 
-          text='Техніка та озброєння' 
-          to="/tech" 
-          isActive={activeLink === '/tech'} 
-          onClick={() => setActiveLink('/tech')}
+        <Sidebar_Link
+          icon={Truck}
+          text="Техніка та озброєння"
+          to="/equipment"
+          isActive={activeLink === '/tech'}
+          onClick={() => handleLinkClick('/tech')}
         />
-        <Sidebar_Link 
-          icon={OperatyvUpr} 
-          text='Оперативне управління' 
-          to="/operational_management" 
-          isActive={activeLink === '/operational_management'} 
-          onClick={() => setActiveLink('/operational_management')}
+        <Sidebar_Link
+          icon={OperatyvUpr}
+          text="Оперативне управління"
+          to="/operational_management"
+          isActive={activeLink === '/operational_management'}
+          onClick={() => handleLinkClick('/operational_management')}
         />
-        <Sidebar_Link 
-          icon={Logistyka} 
-          text='Логістика' 
-          to="/logistics" 
-          isActive={activeLink === '/logistics'} 
-          onClick={() => setActiveLink('/logistics')}
+        <Sidebar_Link
+          icon={Logistyka}
+          text="Логістика"
+          to="/logistics"
+          isActive={activeLink === '/logistics'}
+          onClick={() => handleLinkClick('/logistics')}
         />
-        <Sidebar_Link 
-          icon={Navchannya} 
-          text='Навчання' 
-          to="/exercises" 
-          isActive={activeLink === '/exercises'} 
-          onClick={() => setActiveLink('/exercises')}
+        <Sidebar_Link
+          icon={Navchannya}
+          text="Навчання"
+          to="/exercises"
+          isActive={activeLink === '/exercises'}
+          onClick={() => handleLinkClick('/exercises')}
         />
-        <Sidebar_Link 
-          icon={RozvBezp} 
-          text='Розвідка та безпека' 
-          to="/intelligence" 
-          isActive={activeLink === '/intelligence'} 
-          onClick={() => setActiveLink('/intelligence')}
+        <Sidebar_Link
+          icon={RozvBezp}
+          text="Розвідка та безпека"
+          to="/intelligence"
+          isActive={activeLink === '/intelligence'}
+          onClick={() => handleLinkClick('/intelligence')}
         />
-        <Sidebar_Link 
-          icon={Medical} 
-          text='Медична служба' 
-          to="/medical_service" 
-          isActive={activeLink === '/medical_service'} 
-          onClick={() => setActiveLink('/medical_service')}
+        <Sidebar_Link
+          icon={Medical}
+          text="Медична служба"
+          to="/medical_service"
+          isActive={activeLink === '/medical_service'}
+          onClick={() => handleLinkClick('/medical_service')}
         />
-        <Sidebar_Link 
-          icon={Finances} 
-          text='Фінанси' 
-          to="/finances" 
-          isActive={activeLink === '/finances'} 
-          onClick={() => setActiveLink('/finances')}
+        <Sidebar_Link
+          icon={Finances}
+          text="Фінанси"
+          to="/finances"
+          isActive={activeLink === '/finances'}
+          onClick={() => handleLinkClick('/finances')}
         />
-        <Sidebar_Link 
-          icon={Communication} 
-          text='Комунікації' 
-          to="/communication" 
-          isActive={activeLink === '/communication'} 
-          onClick={() => setActiveLink('/communication')}
+        <Sidebar_Link
+          icon={Communication}
+          text="Комунікації"
+          to="/communication"
+          isActive={activeLink === '/communication'}
+          onClick={() => handleLinkClick('/communication')}
         />
-        <Sidebar_Link 
-          icon={Analityca} 
-          text='Аналітика' 
-          to="/analytics" 
-          isActive={activeLink === '/analytics'} 
-          onClick={() => setActiveLink('/analytics')}
+        <Sidebar_Link
+          icon={Analityca}
+          text="Аналітика"
+          to="/analytics"
+          isActive={activeLink === '/analytics'}
+          onClick={() => handleLinkClick('/analytics')}
         />
       </ul>
     </div>

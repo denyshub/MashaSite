@@ -21,7 +21,9 @@ const data = [
 
 const SmoothCurveChart = () => {
   return (
-    <div style={{ textAlign: 'center', marginLeft: '90px' }}> {/* Margin added here */}
+    <div style={{ textAlign: 'center', marginLeft: '90px' }}>
+      {' '}
+      {/* Margin added here */}
       <h2>Загальна статистика</h2>
       <ResponsiveContainer width="80%" height={400}>
         <LineChart data={data}>

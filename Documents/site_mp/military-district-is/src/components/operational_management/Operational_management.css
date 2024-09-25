@@ -1,31 +1,31 @@
-.om-block-container{
-    background-color: white;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Легка тінь */
-    width: 900px;
-    border-radius: 10px;
-    padding: 0px 10px 10px 30px;
-    margin-left: 90px;
-    margin-top: 30px;
-    transition: 0.3s;
+.om-block-container {
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Легка тінь */
+  width: 900px;
+  border-radius: 10px;
+  padding: 0px 10px 10px 30px;
+  margin-left: 90px;
+  margin-top: 30px;
+  transition: 0.3s;
 }
-.om-block-container:hover{
-    background-color: rgb(236, 236, 236);
+.om-block-container:hover {
+  background-color: rgb(236, 236, 236);
 }
-.om-content-container{
-    margin-top: 50px;
-    margin-bottom: 50px;
+.om-content-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-.om-icon-title{
-    height: 60px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    flex-direction: row;
+.om-icon-title {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-direction: row;
 }
 
 .om-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-    vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Settings.css';
 import { Link } from 'react-router-dom';
-import Settings from "../../images/icons/settings.svg";
-import Help from "../../images/icons/help.svg";
-import Logout from "../../images/icons/leave.svg";
+import Settings from '../../images/icons/settings.svg';
+import Help from '../../images/icons/help.svg';
+import Logout from '../../images/icons/leave.svg';
 import '../help/Help.css';
 const SettingItem = ({ title }) => {
   return (
@@ -37,8 +37,8 @@ const SettingsPage = () => {
         'Двофакторна аутентифікація (2FA)',
         'Керування сесіями',
         'Журнал активності',
-        'Налаштування рівнів доступу'
-      ]
+        'Налаштування рівнів доступу',
+      ],
     },
     {
       category: 'Особисті дані',
@@ -46,8 +46,8 @@ const SettingsPage = () => {
         'Редагування профілю',
         'Налаштування контактної інформації',
         'Завантаження аватара',
-        'Налаштування сповіщень'
-      ]
+        'Налаштування сповіщень',
+      ],
     },
     {
       category: 'Системні налаштування',
@@ -55,36 +55,33 @@ const SettingsPage = () => {
         'Мова інтерфейсу',
         'Часовий пояс',
         'Оновлення системи',
-        'Налаштування інтерфейсу'
-      ]
-    }
+        'Налаштування інтерфейсу',
+      ],
+    },
   ];
 
-  return (<>
-
-
-    <div className="settings-page">
-    <div className="help-page-header">
-        <div className="header-icons">
-
-          <Link to="/help">
-            <img src={Help} className="page-title-icon" alt="Logout" />
-          </Link>
-          <Link to="/logout">
-            <img src={Logout} className="page-title-icon" alt="Logout" />
-          </Link>
+  return (
+    <>
+      <div className="settings-page">
+        <div className="help-page-header">
+          <div className="header-icons">
+            <Link to="/help">
+              <img src={Help} className="page-title-icon" alt="Logout" />
+            </Link>
+            <Link to="/login">
+              <img src={Logout} className="page-title-icon" alt="Logout" />
+            </Link>
+          </div>
         </div>
-      </div>      
-      {settingsData.map((category, index) => (
-        <SettingsCategory
-          key={index}
-          categoryTitle={category.category}
-          settings={category.items}
-        />
-      ))}
-    </div>
-  </>
-    
+        {settingsData.map((category, index) => (
+          <SettingsCategory
+            key={index}
+            categoryTitle={category.category}
+            settings={category.items}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 

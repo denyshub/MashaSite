@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Settings from "../../images/icons/settings.svg";
-import Help from "../../images/icons/help.svg";
-import Logout from "../../images/icons/leave.svg";
-import "./PageTitle.css";
+import Settings from '../../images/icons/settings.svg';
+import Help from '../../images/icons/help.svg';
+import Logout from '../../images/icons/leave.svg';
+import './PageTitle.css';
 
 const PageTitle = (props) => {
   return (
@@ -18,13 +18,13 @@ const PageTitle = (props) => {
           </Link>
         </div>
         <div className="gray-circle-back">
-        <Link to="/help">
-          <img src={Help} className="page-title-icon" alt="Help" />
+          <Link to="/help">
+            <img src={Help} className="page-title-icon" alt="Help" />
           </Link>
         </div>
         <div className="gray-circle-back">
-        <Link to="/login">
-          <img src={Logout} className="page-title-icon" alt="Logout" />
+          <Link to="/login">
+            <img src={Logout} className="page-title-icon" alt="Logout" />
           </Link>
         </div>
       </div>

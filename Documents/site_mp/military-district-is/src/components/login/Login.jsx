@@ -38,10 +38,14 @@ const LoginPage = () => {
               required
             />
           </div>
-          <button type="submit" className="login-btn">Увійти</button>
+          <button type="submit" className="login-btn">
+            Увійти
+          </button>
         </form>
         <div className="login-footer">
-          <p><a href="/forgot-password">Забули пароль?</a></p>
+          <p>
+            <a href="/forgot-password">Забули пароль?</a>
+          </p>
         </div>
       </div>
     </div>
