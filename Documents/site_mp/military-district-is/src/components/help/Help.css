@@ -1,0 +1,110 @@
+/* Основний стиль сторінки допомоги */
+.help-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .help-category {
+    margin-bottom: 30px;
+  }
+  
+  .help-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+  
+  .help-item {
+    background-color: #f9f9f9;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .help-item:hover {
+    background-color: rgb(236, 236, 236);
+  }
+  
+  .help-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .help-answer {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+
+  /* Help.css */
+.help-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .help-page-header {
+    display: flex;
+flex-direction: row-reverse;
+    align-items: end;
+  }
+  
+  .header-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .page-title-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  .help-category {
+    margin-bottom: 30px;
+  }
+  
+ .help-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+  
+  .help-item {
+    background-color: #f9f9f9;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition:  0.3s ;
+  }
+  
+  .help-item:hover {
+    background-color: rgb(236, 236, 236);
+  }
+  
+  .help-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .help-answer {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+  

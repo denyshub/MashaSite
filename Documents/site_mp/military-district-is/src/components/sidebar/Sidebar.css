@@ -1,0 +1,58 @@
+.sidebar {
+  width: 250px;
+  height: 100vh; /* Повна висота */
+  background-color: #202938;
+  padding: 0px 20px 20px 20px;
+  position: fixed; /* Фіксоване положення */
+  top: 0;
+  left: 0;
+  overflow-x: hidden; /* Приховати горизонтальний скрол */
+  overflow: hidden;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Легка тінь */
+}
+
+.sidebar h2 {
+  width: 100px;
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  display: block;
+  padding: 10px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* Стиль для активного пункту меню */
+.sidebar ul li.active a {
+  background-color: #384152; /* Колір фону для активного пункту */
+  color: white; /* Колір тексту для активного пункту */
+}
+
+/* Стиль для наведення на пункти меню */
+.sidebar ul li a:hover {
+  background-color: #384152;
+}
+
+/* Стиль для іконок в сайдбарі */
+.sidebar-icon {
+  width: 24px; /* Встановіть бажану ширину */
+  height: 24px; /* Встановіть бажану висоту */
+  margin-right: 8px; /* Відстань між іконкою та текстом */
+  vertical-align: middle; /* Вирівнювання по вертикалі */
+  filter: brightness(0) invert(1); /* Зробити зображення білим */
+}

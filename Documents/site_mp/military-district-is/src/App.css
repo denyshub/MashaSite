@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+}
+
+
+body {
+  background-color: rgba(243, 244, 246, 1); /* Фон сторінки */
+  margin: 0; /* Відступи */
+  height: 100vh; /* Висота для охоплення всієї видимої області */
+}
+
+.content {
+  margin-left: 280px; /* Відступ для контенту, щоб розмістити Sidebar */
+  padding: 20px;
+  width: calc(100% - 280px); /* Решта простору для контенту */
+}
